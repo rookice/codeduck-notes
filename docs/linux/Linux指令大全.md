@@ -113,36 +113,36 @@ ifconfig eth0 192.168.1.1 netmask 255.255.255.0
 dhclient eth0 							以dhcp模式启⽤eth0
 route add -net 0/0 gw Gateway_IP	 	配置默认⽹关
 route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1
-										配置静态路由到达⽹络'192.168.0.0/16'
-route del 0/0 gw Gateway_IP 			删除静态路由
-hostname 								查看主机名
+							配置静态路由到达⽹络'192.168.0.0/16'
+route del 0/0 gw Gateway_IP 			        删除静态路由
+hostname 						查看主机名
 host www.codeduck.top 					解析主机名
 nslookup www.codeduck.top 				查询DNS记录，查看域名解析是否正常
-ps -ef 									查看所有进程
+ps -ef 							查看所有进程
 ps -ef | grep codeduck 					过滤出你需要的进程
-kill -s name 							kill指定名称的进程
-kill -s pid 							kill指定pid的进程
-top 									实时显示进程状态
-vmstat 1 20 							每1秒采⼀次系统状态，采20次
-iostat 									查看io读写/cpu使⽤情况
-sar -u 1 10 							查询cpu使⽤情况（1秒⼀次，共10次）
-sar -d 1 10 							查询磁盘性能
+kill -s name 						kill指定名称的进程
+kill -s pid 						kill指定pid的进程
+top 							实时显示进程状态
+vmstat 1 20 						每1秒采⼀次系统状态，采20次
+iostat 							查看io读写/cpu使⽤情况
+sar -u 1 10 						查询cpu使⽤情况（1秒⼀次，共10次）
+sar -d 1 10 						查询磁盘性能
 ```
 
 # 常见系统服务命令
 
 ```
-chkconfig --list 						列出系统服务
-service <服务名> status 			    查看某个服务
-service <服务名> start  				启动某个服务
-service <服务名> stop 					终⽌某个服务
-service <服务名> restart 				重启某个服务
-systemctl status <服务名>				查看某个服务
-systemctl start <服务名>   			启动某个服务
-systemctl stop <服务名>  				终⽌某个服务
-systemctl restart <服务名> 			重启某个服务
-systemctl enable <服务名> 				开启⾃启动
-systemctl disable <服务名> 			关闭⾃启动
+chkconfig --list 					列出系统服务
+service <服务名> status 			             查看某个服务
+service <服务名> start  				     启动某个服务
+service <服务名> stop 				     终⽌某个服务
+service <服务名> restart 				     重启某个服务
+systemctl status <服务名>				     查看某个服务
+systemctl start <服务名>   			     启动某个服务
+systemctl stop <服务名>  				    终⽌某个服务
+systemctl restart <服务名> 			    重启某个服务
+systemctl enable <服务名> 				    开启⾃启动
+systemctl disable <服务名> 			    关闭⾃启动
 ```
 
 # 文件和目录操作
